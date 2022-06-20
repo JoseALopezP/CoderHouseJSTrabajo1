@@ -1,15 +1,15 @@
-let value;
-let pValue
-let total;
+let value; //va a guardar los nuevos valores ingresados
+let pValue; //guarda el valor usado en al iteracion anterior para poder volver atras
+let total; //total (parcial y final)
 console.log("Voy a ayudarte a sumar el total de hoy");
 value=pValue=total=prompt("Ingresa el primer numero (ESC para salir)");
-while(value != "ESC" && isNaN(value)){
+while(value != "ESC" && isNaN(value)){ //verificacion ingreso de datos
     alert("Disculpa, no entendi, repite");
     console.log(value);
     value=pValue=total=prompt("Ingresa el primer numero (ESC para salir)");
 }
 while(value != "ESC"){
-    console.log("Su total actual es: ", total);
+    console.log("Su total parcial es: ", total);
     value=prompt("Ingrese otro numero (ESC para salir, ANT para eliminar la ultima suma)");
     while(value != "ESC" && value != "ANT" && isNaN(value)){
         alert("Disculpa, no entendi, repite");
